@@ -46,7 +46,6 @@ PODS:
   - ReactiveCocoa/no-arc (2.3)
   - ReactiveCocoa/UI (2.3):
     - ReactiveCocoa/Core
-  - Reveal-iOS-SDK (1.6.2)
   - SDWebImage (5.9.3):
     - SDWebImage/Core (= 5.9.3)
   - SDWebImage/Core (5.9.3)
@@ -61,7 +60,6 @@ DEPENDENCIES:
   - MJRefresh
   - Ono
   - ReactiveCocoa (= 2.3)
-  - Reveal-iOS-SDK
   - SDWebImage
 
 SPEC REPOS:
@@ -76,7 +74,6 @@ SPEC REPOS:
     - MJRefresh
     - Ono
     - ReactiveCocoa
-    - Reveal-iOS-SDK
     - SDWebImage
 
 SPEC CHECKSUMS:
@@ -90,9 +87,8 @@ SPEC CHECKSUMS:
   MJRefresh: 6afc955813966afb08305477dd7a0d9ad5e79a16
   Ono: 26a7c1fc4df13ece7747560a1d80655807a8a000
   ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
-  Reveal-iOS-SDK: e2250b3c155bcfac53ae223ddc1f76d08f206c33
   SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
 
-PODFILE CHECKSUM: ef7035c9399619bdcf575a4ca8fd8a9160eb54a5
+PODFILE CHECKSUM: b3bb581db0d50c709ed98c2bfbffef92a77425ce
 
 COCOAPODS: 1.9.3
