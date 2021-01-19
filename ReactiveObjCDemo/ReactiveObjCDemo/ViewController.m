@@ -6,10 +6,13 @@
 //
 
 #import "ViewController.h"
-#import <ReactiveObjC.h>
-
 #import "SMDB.h"
- 
+#import "SMNetManager.h"
+
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#import <UIImageView+WebCache.h>
+#import <ReactiveCocoa/RACEXTScope.h>
+
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *feeds;
 @end
@@ -22,8 +25,6 @@
     
     [self RACObserve];
 }
-
- 
 
 - (void)RACObserve{
     
@@ -41,8 +42,25 @@
     //监听列表数据变化进行列表更新
     [RACObserve(self, feeds) subscribeNext:^(id x) {
         @strongify(self);
-//        [self fetchAllFeeds];
-        NSLog(@"fetchAllFeeds");
+        [self fetchAllFeeds];
+    }];
+}
+
+- (void)fetchAllFeeds {
+    
+    @weakify(self);
+    [[[[[[SMNetManager shareInstance] fetchAllFeedWithModelArray:self.feeds] map:^id(NSNumber *value) {
+        @strongify(self);
+        NSUInteger index = [value integerValue];
+        return self.feeds[index];
+    }] doCompleted:^{
+        //抓完所有的feeds
+//        @strongify(self);
+        NSLog(@"fetch complete");
+    }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id value) {
+        //抓完一个
+//        @strongify(self);
+        NSLog(@"index: %@",value);
     }];
 }
 

@@ -6,8 +6,11 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <ReactiveObjC.h>
-
+//#import <ReactiveObjC.h>
+#import <ReactiveCocoa/ReactiveCocoa.h>
+ 
+#import <UIImageView+WebCache.h>
+#import <ReactiveCocoa/RACEXTScope.h>
 NS_ASSUME_NONNULL_BEGIN
 
 @interface SMDB : NSObject

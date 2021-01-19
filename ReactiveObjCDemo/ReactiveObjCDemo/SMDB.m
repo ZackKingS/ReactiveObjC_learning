@@ -27,6 +27,9 @@
         NSMutableArray *feedsArray = [NSMutableArray array];
         [feedsArray addObject:@"1"];
         [feedsArray addObject:@"2"];
+        [feedsArray addObject:@"3"];
+        [feedsArray addObject:@"4"];
+        [feedsArray addObject:@"5"];
         [subscriber sendNext:feedsArray];
         [subscriber sendCompleted];
         return nil;

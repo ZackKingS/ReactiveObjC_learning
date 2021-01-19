@@ -15,6 +15,7 @@
 		1445840225B5A1AB00FBA435 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1445840025B5A1AB00FBA435 /* LaunchScreen.storyboard */; };
 		1445840525B5A1AB00FBA435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445840425B5A1AB00FBA435 /* main.m */; };
 		1445846825B6860600FBA435 /* SMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445846725B6860600FBA435 /* SMDB.m */; };
+		1445846F25B68ADE00FBA435 /* SMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445846E25B68ADE00FBA435 /* SMNetManager.m */; };
 		F9FFDA964900E8B02050EEC2 /* Pods_ReactiveObjCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,8 @@
 		1445840425B5A1AB00FBA435 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1445846625B6860600FBA435 /* SMDB.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMDB.h; sourceTree = "<group>"; };
 		1445846725B6860600FBA435 /* SMDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMDB.m; sourceTree = "<group>"; };
+		1445846D25B68ADE00FBA435 /* SMNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMNetManager.h; sourceTree = "<group>"; };
+		1445846E25B68ADE00FBA435 /* SMNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMNetManager.m; sourceTree = "<group>"; };
 		16EFD9B9E5AE39C8CBBD99DE /* Pods-ReactiveObjCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveObjCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D796927861769201D1AA14B3 /* Pods-ReactiveObjCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.release.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +83,8 @@
 				144583FB25B5A1A900FBA435 /* Main.storyboard */,
 				1445846625B6860600FBA435 /* SMDB.h */,
 				1445846725B6860600FBA435 /* SMDB.m */,
+				1445846D25B68ADE00FBA435 /* SMNetManager.h */,
+				1445846E25B68ADE00FBA435 /* SMNetManager.m */,
 				144583FE25B5A1AB00FBA435 /* Assets.xcassets */,
 				1445840025B5A1AB00FBA435 /* LaunchScreen.storyboard */,
 				1445840325B5A1AB00FBA435 /* Info.plist */,
@@ -221,6 +226,7 @@
 				1445846825B6860600FBA435 /* SMDB.m in Sources */,
 				144583FA25B5A1A900FBA435 /* ViewController.m in Sources */,
 				144583F425B5A1A900FBA435 /* AppDelegate.m in Sources */,
+				1445846F25B68ADE00FBA435 /* SMNetManager.m in Sources */,
 				1445840525B5A1AB00FBA435 /* main.m in Sources */,
 				144583F725B5A1A900FBA435 /* SceneDelegate.m in Sources */,
 			);
