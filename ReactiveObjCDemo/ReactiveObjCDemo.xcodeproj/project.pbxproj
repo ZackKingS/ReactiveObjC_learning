@@ -16,6 +16,22 @@
 		1445840525B5A1AB00FBA435 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445840425B5A1AB00FBA435 /* main.m */; };
 		1445846825B6860600FBA435 /* SMDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445846725B6860600FBA435 /* SMDB.m */; };
 		1445846F25B68ADE00FBA435 /* SMNetManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445846E25B68ADE00FBA435 /* SMNetManager.m */; };
+		144584A025B6B03400FBA435 /* SMCallStackModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445848525B6B03400FBA435 /* SMCallStackModel.m */; };
+		144584A125B6B03400FBA435 /* SMLagButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445848825B6B03400FBA435 /* SMLagButton.m */; };
+		144584A225B6B03400FBA435 /* SMLagDB.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445848925B6B03400FBA435 /* SMLagDB.m */; };
+		144584A325B6B03400FBA435 /* SMCPUMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445848B25B6B03400FBA435 /* SMCPUMonitor.m */; };
+		144584A425B6B03400FBA435 /* SMCallTraceTimeCostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849025B6B03400FBA435 /* SMCallTraceTimeCostModel.m */; };
+		144584A525B6B03400FBA435 /* SMLagMonitor.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849325B6B03400FBA435 /* SMLagMonitor.m */; };
+		144584A625B6B03400FBA435 /* SMCallTrace.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849425B6B03400FBA435 /* SMCallTrace.m */; };
+		144584A725B6B03400FBA435 /* SMStackCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849625B6B03400FBA435 /* SMStackCell.m */; };
+		144584A825B6B03400FBA435 /* SMStackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849725B6B03400FBA435 /* SMStackViewController.m */; };
+		144584A925B6B03400FBA435 /* SMCallStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849825B6B03400FBA435 /* SMCallStack.m */; };
+		144584AA25B6B03400FBA435 /* SMClsCallCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849B25B6B03400FBA435 /* SMClsCallCell.m */; };
+		144584AB25B6B03400FBA435 /* SMCallTraceCore.c in Sources */ = {isa = PBXBuildFile; fileRef = 1445849C25B6B03400FBA435 /* SMCallTraceCore.c */; };
+		144584AC25B6B03400FBA435 /* SMCallLib.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849D25B6B03400FBA435 /* SMCallLib.m */; };
+		144584AD25B6B03400FBA435 /* SMClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849F25B6B03400FBA435 /* SMClsCallViewController.m */; };
+		144584B325B6B55100FBA435 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 144584B125B6B55100FBA435 /* DCHook.m */; };
+		144584B425B6B55100FBA435 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 144584B225B6B55100FBA435 /* UIViewController+clsCall.m */; };
 		F9FFDA964900E8B02050EEC2 /* Pods_ReactiveObjCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +52,38 @@
 		1445846725B6860600FBA435 /* SMDB.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMDB.m; sourceTree = "<group>"; };
 		1445846D25B68ADE00FBA435 /* SMNetManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SMNetManager.h; sourceTree = "<group>"; };
 		1445846E25B68ADE00FBA435 /* SMNetManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SMNetManager.m; sourceTree = "<group>"; };
+		1445848425B6B03400FBA435 /* SMStackCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStackCell.h; sourceTree = "<group>"; };
+		1445848525B6B03400FBA435 /* SMCallStackModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallStackModel.m; sourceTree = "<group>"; };
+		1445848625B6B03400FBA435 /* SMCallTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTrace.h; sourceTree = "<group>"; };
+		1445848725B6B03400FBA435 /* SMLagMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagMonitor.h; sourceTree = "<group>"; };
+		1445848825B6B03400FBA435 /* SMLagButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagButton.m; sourceTree = "<group>"; };
+		1445848925B6B03400FBA435 /* SMLagDB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagDB.m; sourceTree = "<group>"; };
+		1445848A25B6B03400FBA435 /* SMCallStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallStack.h; sourceTree = "<group>"; };
+		1445848B25B6B03400FBA435 /* SMCPUMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCPUMonitor.m; sourceTree = "<group>"; };
+		1445848C25B6B03400FBA435 /* SMStackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMStackViewController.h; sourceTree = "<group>"; };
+		1445848D25B6B03400FBA435 /* SMCallTraceCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTraceCore.h; sourceTree = "<group>"; };
+		1445848E25B6B03400FBA435 /* SMClsCallCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClsCallCell.h; sourceTree = "<group>"; };
+		1445848F25B6B03400FBA435 /* SMClsCallViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMClsCallViewController.h; sourceTree = "<group>"; };
+		1445849025B6B03400FBA435 /* SMCallTraceTimeCostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallTraceTimeCostModel.m; sourceTree = "<group>"; };
+		1445849125B6B03400FBA435 /* SMCallLib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallLib.h; sourceTree = "<group>"; };
+		1445849225B6B03400FBA435 /* SMLagButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagButton.h; sourceTree = "<group>"; };
+		1445849325B6B03400FBA435 /* SMLagMonitor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMLagMonitor.m; sourceTree = "<group>"; };
+		1445849425B6B03400FBA435 /* SMCallTrace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallTrace.m; sourceTree = "<group>"; };
+		1445849525B6B03400FBA435 /* SMCallStackModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallStackModel.h; sourceTree = "<group>"; };
+		1445849625B6B03400FBA435 /* SMStackCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStackCell.m; sourceTree = "<group>"; };
+		1445849725B6B03400FBA435 /* SMStackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMStackViewController.m; sourceTree = "<group>"; };
+		1445849825B6B03400FBA435 /* SMCallStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallStack.m; sourceTree = "<group>"; };
+		1445849925B6B03400FBA435 /* SMCPUMonitor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCPUMonitor.h; sourceTree = "<group>"; };
+		1445849A25B6B03400FBA435 /* SMLagDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMLagDB.h; sourceTree = "<group>"; };
+		1445849B25B6B03400FBA435 /* SMClsCallCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMClsCallCell.m; sourceTree = "<group>"; };
+		1445849C25B6B03400FBA435 /* SMCallTraceCore.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = SMCallTraceCore.c; sourceTree = "<group>"; };
+		1445849D25B6B03400FBA435 /* SMCallLib.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMCallLib.m; sourceTree = "<group>"; };
+		1445849E25B6B03400FBA435 /* SMCallTraceTimeCostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMCallTraceTimeCostModel.h; sourceTree = "<group>"; };
+		1445849F25B6B03400FBA435 /* SMClsCallViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SMClsCallViewController.m; sourceTree = "<group>"; };
+		144584AF25B6B55000FBA435 /* UIViewController+clsCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+clsCall.h"; sourceTree = "<group>"; };
+		144584B025B6B55100FBA435 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
+		144584B125B6B55100FBA435 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
+		144584B225B6B55100FBA435 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
 		16EFD9B9E5AE39C8CBBD99DE /* Pods-ReactiveObjCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveObjCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D796927861769201D1AA14B3 /* Pods-ReactiveObjCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.release.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,19 +126,75 @@
 				144583F325B5A1A900FBA435 /* AppDelegate.m */,
 				144583F525B5A1A900FBA435 /* SceneDelegate.h */,
 				144583F625B5A1A900FBA435 /* SceneDelegate.m */,
+				144584B825B6B62900FBA435 /* SM */,
+				144584B625B6B55600FBA435 /* Hook */,
+				1445848325B6B03400FBA435 /* SMLagMonitor */,
 				144583F825B5A1A900FBA435 /* ViewController.h */,
 				144583F925B5A1A900FBA435 /* ViewController.m */,
 				144583FB25B5A1A900FBA435 /* Main.storyboard */,
-				1445846625B6860600FBA435 /* SMDB.h */,
-				1445846725B6860600FBA435 /* SMDB.m */,
-				1445846D25B68ADE00FBA435 /* SMNetManager.h */,
-				1445846E25B68ADE00FBA435 /* SMNetManager.m */,
 				144583FE25B5A1AB00FBA435 /* Assets.xcassets */,
 				1445840025B5A1AB00FBA435 /* LaunchScreen.storyboard */,
 				1445840325B5A1AB00FBA435 /* Info.plist */,
 				1445840425B5A1AB00FBA435 /* main.m */,
 			);
 			path = ReactiveObjCDemo;
+			sourceTree = "<group>";
+		};
+		1445848325B6B03400FBA435 /* SMLagMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				1445848425B6B03400FBA435 /* SMStackCell.h */,
+				1445848525B6B03400FBA435 /* SMCallStackModel.m */,
+				1445848625B6B03400FBA435 /* SMCallTrace.h */,
+				1445848725B6B03400FBA435 /* SMLagMonitor.h */,
+				1445848825B6B03400FBA435 /* SMLagButton.m */,
+				1445848925B6B03400FBA435 /* SMLagDB.m */,
+				1445848A25B6B03400FBA435 /* SMCallStack.h */,
+				1445848B25B6B03400FBA435 /* SMCPUMonitor.m */,
+				1445848C25B6B03400FBA435 /* SMStackViewController.h */,
+				1445848D25B6B03400FBA435 /* SMCallTraceCore.h */,
+				1445848E25B6B03400FBA435 /* SMClsCallCell.h */,
+				1445848F25B6B03400FBA435 /* SMClsCallViewController.h */,
+				1445849025B6B03400FBA435 /* SMCallTraceTimeCostModel.m */,
+				1445849125B6B03400FBA435 /* SMCallLib.h */,
+				1445849225B6B03400FBA435 /* SMLagButton.h */,
+				1445849325B6B03400FBA435 /* SMLagMonitor.m */,
+				1445849425B6B03400FBA435 /* SMCallTrace.m */,
+				1445849525B6B03400FBA435 /* SMCallStackModel.h */,
+				1445849625B6B03400FBA435 /* SMStackCell.m */,
+				1445849725B6B03400FBA435 /* SMStackViewController.m */,
+				1445849825B6B03400FBA435 /* SMCallStack.m */,
+				1445849925B6B03400FBA435 /* SMCPUMonitor.h */,
+				1445849A25B6B03400FBA435 /* SMLagDB.h */,
+				1445849B25B6B03400FBA435 /* SMClsCallCell.m */,
+				1445849C25B6B03400FBA435 /* SMCallTraceCore.c */,
+				1445849D25B6B03400FBA435 /* SMCallLib.m */,
+				1445849E25B6B03400FBA435 /* SMCallTraceTimeCostModel.h */,
+				1445849F25B6B03400FBA435 /* SMClsCallViewController.m */,
+			);
+			path = SMLagMonitor;
+			sourceTree = "<group>";
+		};
+		144584B625B6B55600FBA435 /* Hook */ = {
+			isa = PBXGroup;
+			children = (
+				144584B025B6B55100FBA435 /* DCHook.h */,
+				144584B125B6B55100FBA435 /* DCHook.m */,
+				144584AF25B6B55000FBA435 /* UIViewController+clsCall.h */,
+				144584B225B6B55100FBA435 /* UIViewController+clsCall.m */,
+			);
+			path = Hook;
+			sourceTree = "<group>";
+		};
+		144584B825B6B62900FBA435 /* SM */ = {
+			isa = PBXGroup;
+			children = (
+				1445846625B6860600FBA435 /* SMDB.h */,
+				1445846725B6860600FBA435 /* SMDB.m */,
+				1445846D25B68ADE00FBA435 /* SMNetManager.h */,
+				1445846E25B68ADE00FBA435 /* SMNetManager.m */,
+			);
+			path = SM;
 			sourceTree = "<group>";
 		};
 		78E217CBEE12980BCED75AE3 /* Frameworks */ = {
@@ -223,11 +327,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				144584A125B6B03400FBA435 /* SMLagButton.m in Sources */,
+				144584AA25B6B03400FBA435 /* SMClsCallCell.m in Sources */,
 				1445846825B6860600FBA435 /* SMDB.m in Sources */,
 				144583FA25B5A1A900FBA435 /* ViewController.m in Sources */,
+				144584A325B6B03400FBA435 /* SMCPUMonitor.m in Sources */,
+				144584A725B6B03400FBA435 /* SMStackCell.m in Sources */,
+				144584A025B6B03400FBA435 /* SMCallStackModel.m in Sources */,
 				144583F425B5A1A900FBA435 /* AppDelegate.m in Sources */,
+				144584AC25B6B03400FBA435 /* SMCallLib.m in Sources */,
+				144584AD25B6B03400FBA435 /* SMClsCallViewController.m in Sources */,
+				144584A825B6B03400FBA435 /* SMStackViewController.m in Sources */,
 				1445846F25B68ADE00FBA435 /* SMNetManager.m in Sources */,
+				144584A225B6B03400FBA435 /* SMLagDB.m in Sources */,
+				144584A925B6B03400FBA435 /* SMCallStack.m in Sources */,
 				1445840525B5A1AB00FBA435 /* main.m in Sources */,
+				144584A525B6B03400FBA435 /* SMLagMonitor.m in Sources */,
+				144584A625B6B03400FBA435 /* SMCallTrace.m in Sources */,
+				144584A425B6B03400FBA435 /* SMCallTraceTimeCostModel.m in Sources */,
+				144584B325B6B55100FBA435 /* DCHook.m in Sources */,
+				144584B425B6B55100FBA435 /* UIViewController+clsCall.m in Sources */,
+				144584AB25B6B03400FBA435 /* SMCallTraceCore.c in Sources */,
 				144583F725B5A1A900FBA435 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

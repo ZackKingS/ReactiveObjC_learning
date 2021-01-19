@@ -13,9 +13,18 @@
 #import <UIImageView+WebCache.h>
 #import <ReactiveCocoa/RACEXTScope.h>
 
+#import "SMLagButton.h"
+#import "SMStackViewController.h"
+#import "SMClsCallViewController.h"
+#import "Masonry.h"
+
+
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *feeds;
 @property (nonatomic) NSUInteger fetchingCount;
+//monitor
+@property (nonatomic, strong) SMLagButton *stackBt;
+@property (nonatomic, strong) SMLagButton *clsCallBt;
 @end
 
 @implementation ViewController
@@ -23,6 +32,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [self.view addSubview:self.stackBt];
+    [self.view addSubview:self.clsCallBt];
+    
+    [self.clsCallBt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view).offset(120);
+        make.right.equalTo(self.view).offset(-10);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+    }];
+    
+    [self.stackBt mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.clsCallBt.mas_top);
+        make.right.equalTo(self.clsCallBt.mas_left).offset(-10);
+        make.size.mas_equalTo(CGSizeMake(40, 40));
+    }];
+    
     
     [self RACObserve];
 }
@@ -65,13 +90,10 @@
         self.fetchingCount = 0;
         NSLog(@"fetch complete");
         
-        
     }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id value) {
        
         //抓完一个
 //        @strongify(self);
-//        NSLog(@"deliverOn: %@",value);
-        
         self.fetchingCount += 1;
         NSString* text = [NSString stringWithFormat:@"正在获取...(%lu/%lu)",(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
         NSLog(@"%@",text);
@@ -79,7 +101,31 @@
     }];
 }
 
-- (void)subscribe{
+- (SMLagButton *)stackBt{
+    if (!_stackBt) {
+        _stackBt = [[SMLagButton alloc] initWithStr:@"堆栈" size:16 backgroundColor:[UIColor blackColor]];
+        [[_stackBt click] subscribeNext:^(id x) {
+            SMStackViewController *vc = [[SMStackViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+    }
+    return _stackBt;
+}
+
+- (SMLagButton *)clsCallBt {
+    if (!_clsCallBt) {
+        _clsCallBt = [[SMLagButton alloc] initWithStr:@"频次" size:16 backgroundColor:[UIColor blackColor]];
+        [[_clsCallBt click] subscribeNext:^(id x) {
+            SMClsCallViewController *vc = [[SMClsCallViewController alloc] init];
+            [self.navigationController pushViewController:vc animated:YES];
+        }];
+    }
+    return _clsCallBt;
+}
+
+
+
+- (void)basicUseage{
     
     //1、创建订阅者
     RACSignal * signal = [RACSignal createSignal:^RACDisposable * _Nullable(id<RACSubscriber>  _Nonnull subscriber) {
