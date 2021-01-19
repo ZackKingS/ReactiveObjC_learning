@@ -15,6 +15,7 @@
 
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *feeds;
+@property (nonatomic) NSUInteger fetchingCount;
 @end
 
 @implementation ViewController
@@ -48,19 +49,33 @@
 
 - (void)fetchAllFeeds {
     
+    self.fetchingCount = 0; //统计抓取数量
+    
     @weakify(self);
     [[[[[[SMNetManager shareInstance] fetchAllFeedWithModelArray:self.feeds] map:^id(NSNumber *value) {
+       
         @strongify(self);
         NSUInteger index = [value integerValue];
         return self.feeds[index];
+        
     }] doCompleted:^{
+        
         //抓完所有的feeds
 //        @strongify(self);
+        self.fetchingCount = 0;
         NSLog(@"fetch complete");
+        
+        
     }] deliverOn:[RACScheduler mainThreadScheduler]] subscribeNext:^(id value) {
+       
         //抓完一个
 //        @strongify(self);
-        NSLog(@"index: %@",value);
+//        NSLog(@"deliverOn: %@",value);
+        
+        self.fetchingCount += 1;
+        NSString* text = [NSString stringWithFormat:@"正在获取...(%lu/%lu)",(unsigned long)self.fetchingCount,(unsigned long)self.feeds.count];
+        NSLog(@"%@",text);
+         
     }];
 }
 

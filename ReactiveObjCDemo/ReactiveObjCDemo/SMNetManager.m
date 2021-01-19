@@ -34,7 +34,7 @@
             dispatch_async(fetchFeedQueue, ^{
                  
                 NSLog(@"begin task %d",i);
-                sleep(1);
+                sleep(3);
                 NSLog(@"end task %d",i);
                 [subscriber sendNext:@(i)];
                 dispatch_group_leave(group);
