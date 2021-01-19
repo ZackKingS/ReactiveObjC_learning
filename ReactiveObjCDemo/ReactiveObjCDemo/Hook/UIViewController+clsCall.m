@@ -40,9 +40,10 @@
     [self clsCallHookViewWillDisappear:animated];
 }
 
+
 - (void)clsCallInsertToViewWillAppear {
     //显示
-    [SMCallTrace startWithMaxDepth:0];
+    [SMCallTrace startWithMaxDepth:3];
 }
 - (void)clsCallInsertToViewWillDisappear {
     //消失

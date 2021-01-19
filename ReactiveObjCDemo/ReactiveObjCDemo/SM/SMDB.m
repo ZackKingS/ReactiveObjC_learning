@@ -21,9 +21,9 @@
 
 //本地读取首页订阅源数据
 - (RACSignal *)selectAllFeeds {
-    @weakify(self);
+//    @weakify(self);
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-        @strongify(self);
+//        @strongify(self);
         NSMutableArray *feedsArray = [NSMutableArray array];
         [feedsArray addObject:@"1"];
         [feedsArray addObject:@"2"];

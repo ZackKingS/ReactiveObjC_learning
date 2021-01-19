@@ -49,8 +49,15 @@
     }];
     
     
-    [self RACObserve];
+//    [self RACObserve];
+    
+    [self hhhh];
 }
+
+- (void)hhhh{
+    sleep(3);
+}
+
 
 - (void)RACObserve{
     

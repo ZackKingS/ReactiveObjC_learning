@@ -26,7 +26,7 @@
         dispatch_queue_t fetchFeedQueue = dispatch_queue_create("com.starming.fetchfeed.fetchfeed", DISPATCH_QUEUE_CONCURRENT);
         dispatch_group_t group = dispatch_group_create();
         
-        for (int i =0; i<modelArray.count; i++) {
+        for (int i=0; i<modelArray.count; i++) {
             //创建并行队列
            
             dispatch_group_enter(group);

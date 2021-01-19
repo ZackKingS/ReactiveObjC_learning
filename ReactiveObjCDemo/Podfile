@@ -7,7 +7,7 @@ target 'ReactiveObjCDemo' do
 
 #pod 'ReactiveObjC', '~> 3.0.0'
 
-pod 'Reveal-iOS-SDK', :configurations => ['Debug']
+#pod 'Reveal-iOS-SDK', :configurations => ['Debug']
 pod 'SDWebImage'
 pod 'Masonry'
 pod 'MJRefresh'
