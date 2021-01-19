@@ -10,6 +10,8 @@
 #import "SMCPUMonitor.h"
 #import "SMLagDB.h"
 
+ 
+
 @interface SMLagMonitor() {
     int timeoutCount;
     CFRunLoopObserverRef runLoopObserver;
@@ -71,16 +73,19 @@
                 //两个runloop的状态，BeforeSources和AfterWaiting这两个状态区间时间能够检测到是否卡顿
                 if (runLoopActivity == kCFRunLoopBeforeSources || runLoopActivity == kCFRunLoopAfterWaiting) {
                     //出现三次出结果
+                    NSLog(@"出现三次出结果");
                     if (++timeoutCount < 3) {
                         continue;
                     }
-//                    NSLog(@"monitor trigger");
+                    NSLog(@"monitor trigger");
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
                         NSString *stackStr = [SMCallStack callStackWithType:SMCallStackTypeMain];
                         SMCallStackModel *model = [[SMCallStackModel alloc] init];
                         model.stackStr = stackStr;
                         model.isStuck = YES;
-                        [[[SMLagDB shareInstance] increaseWithStackModel:model] subscribeNext:^(id x) {}];
+                        [[[SMLagDB shareInstance] increaseWithStackModel:model] subscribeNext:^(id x) {
+                            
+                        }];
                     });
                 } //end activity
             }// end semaphore wait

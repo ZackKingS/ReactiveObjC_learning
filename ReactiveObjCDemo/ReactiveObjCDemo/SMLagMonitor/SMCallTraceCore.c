@@ -255,6 +255,8 @@ typedef struct {
 } thread_call_stack;
 
 static inline thread_call_stack * get_thread_call_stack() {
+    
+                                               //用来读取这个私有数据
     thread_call_stack *cs = (thread_call_stack *)pthread_getspecific(_thread_key);
     if (cs == NULL) {
         cs = (thread_call_stack *)malloc(sizeof(thread_call_stack));
@@ -262,6 +264,7 @@ static inline thread_call_stack * get_thread_call_stack() {
         cs->allocated_length = 64;
         cs->index = -1;
         cs->is_main_thread = pthread_main_np();
+        //可以将私有数据设置在指定线程上
         pthread_setspecific(_thread_key, cs);
     }
     return cs;
@@ -274,6 +277,10 @@ static void release_thread_call_stack(void *ptr) {
     free(cs);
 }
 
+/*
+ 你需要先实现两个方法 pushCallRecord 和 popCallRecord，
+ 来分别记录 objc_msgSend 方法调用前后的时间，然后相减就能够得到方法的执行耗时。
+ */
 static inline void push_call_record(id _self, Class _cls, SEL _cmd, uintptr_t lr) {
     thread_call_stack *cs = get_thread_call_stack();
     if (cs) {
@@ -295,6 +302,10 @@ static inline void push_call_record(id _self, Class _cls, SEL _cmd, uintptr_t lr
     }
 }
 
+/*
+ 你需要先实现两个方法 pushCallRecord 和 popCallRecord，
+ 来分别记录 objc_msgSend 方法调用前后的时间，然后相减就能够得到方法的执行耗时。
+ */
 static inline uintptr_t pop_call_record() {
     thread_call_stack *cs = get_thread_call_stack();
     int curIndex = cs->index;
@@ -414,6 +425,8 @@ void smCallTraceStart() {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         pthread_key_create(&_thread_key, &release_thread_call_stack);
+        
+        //fishhook 够搞定 objc_msgSend
         fish_rebind_symbols((struct rebinding[6]){
             {"objc_msgSend", (void *)hook_Objc_msgSend, (void **)&orig_objc_msgSend},
         }, 1);
