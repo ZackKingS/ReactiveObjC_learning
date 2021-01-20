@@ -28,6 +28,8 @@ static mach_port_t _smMainThreadId;
 
 #pragma mark - Interface
 + (NSString *)callStackWithType:(SMCallStackType)type {
+    
+    //全部线程
     if (type == SMCallStackTypeAll) {
         thread_act_array_t threads; //int 组成的数组比如 thread[1] = 5635
         mach_msg_type_number_t thread_count = 0; //mach_msg_type_number_t 是 int 类型
@@ -54,16 +56,22 @@ static mach_port_t _smMainThreadId;
         //释放虚存缓存，防止leak
         assert(vm_deallocate(mach_task_self(), (vm_address_t)threads, thread_count * sizeof(thread_t)) == KERN_SUCCESS);
         return [reStr copy];
+
+    }
+    
+    //主线程
+    else if (type == SMCallStackTypeMain) {
         
-    } else if (type == SMCallStackTypeMain) {
-        //主线程
         NSString *reStr = smStackOfThread((thread_t)_smMainThreadId);
         assert(vm_deallocate(mach_task_self(), (vm_address_t)_smMainThreadId, 1 * sizeof(thread_t)) == KERN_SUCCESS);
-        NSLog(@"%@",reStr);
+//        NSLog(@"主线程 reStr: %@",reStr);
         return [reStr copy];
         
-    } else {
-        //当前线程
+    }
+    
+    //当前线程
+    else {
+        
         char name[256];
         mach_msg_type_number_t count;
         thread_act_array_t list;
@@ -118,10 +126,8 @@ NSString *smStackOfThread(thread_t thread) {
     
     uintptr_t buffer[100];
     int i = 0;
-    NSMutableString *reStr = [NSMutableString stringWithFormat:@"Stack of thread: %u:\nCPU used: %.1f percent\nuser time: %d second\n", thread, threadInfoSt.cpuUsage, threadInfoSt.userTime];
-    
-    NSLog(@"reStr: %@",reStr);
-    
+    NSMutableString *reStr = [NSMutableString stringWithFormat:@"Stack of thread: %u:\n CPU used: %.1f percent\n user time: %d second\n", thread, threadInfoSt.cpuUsage, threadInfoSt.userTime];
+     
     //回溯栈的算法
     /*
      栈帧布局参考：

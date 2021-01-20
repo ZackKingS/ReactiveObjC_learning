@@ -41,6 +41,17 @@
 }
 
 /*
+  
+ typedef CF_OPTIONS(CFOptionFlags, CFRunLoopActivity) {
+     kCFRunLoopEntry = (1UL << 0),
+     kCFRunLoopBeforeTimers = (1UL << 1),    -> 2
+     kCFRunLoopBeforeSources = (1UL << 2),   -> 4
+     kCFRunLoopBeforeWaiting = (1UL << 5),   -> 32
+     kCFRunLoopAfterWaiting = (1UL << 6),    -> 64
+     kCFRunLoopExit = (1UL << 7),            -> 128
+     kCFRunLoopAllActivities = 0x0FFFFFFFU
+ };
+ 
  对于 iOS 开发来说，监控卡顿就是要去找到主线程上都做了哪些事儿。我们都知道，线程的消息事件是依赖于 NSRunLoop 的，所以从 NSRunLoop 入手，就可以知道主线程上都调用了哪些方法。我们通过监听 NSRunLoop 的状态，就能够发现调用方法是否执行时间过长，从而判断出是否会出现卡顿。
  */
 - (void)beginMonitor {
@@ -81,18 +92,22 @@
                     self.runLoopActivity = 0;
                     return;
                 }
-                //两个runloop的状态，BeforeSources和AfterWaiting这两个状态区间时间能够检测到是否卡顿
+                //两个runloop的状态， BeforeSources(4)  和 AfterWaiting(64) 这两个状态区间时间能够检测到是否卡顿
                 if (self.runLoopActivity == kCFRunLoopBeforeSources || self.runLoopActivity == kCFRunLoopAfterWaiting) {
                    
-                    NSLog(@"出现结果");
+//                    NSLog(@"出现结果");
                     if (++self.timeoutCount < 3) {
                         continue;
                     }
-
-                    NSLog(@"出现三次结果 monitor trigger");
-                    //将堆栈信息上报服务器的代码放到这里
+//                    NSLog(@"出现结果大于三次 ！ monitor trigger ！");
+                    
+                    /*
+                     将【堆栈信息】上报服务器的代码放到这里
+                     */
                     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
-                        NSString *stackStr = [SMCallStack callStackWithType:SMCallStackTypeMain];
+                        
+                        //获取主线程 堆栈信息
+                        NSString *stackStr = [SMCallStack callStackWithType: SMCallStackTypeMain];
                         SMCallStackModel *model = [[SMCallStackModel alloc] init];
                         model.stackStr = stackStr;
                         model.isStuck = YES;
@@ -127,6 +142,8 @@
 static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
     SMLagMonitor *lagMonitor = (__bridge SMLagMonitor*)info;
     lagMonitor.runLoopActivity = activity;
+    
+//    NSLog(@"activity: %lu",activity);
     
     dispatch_semaphore_t semaphore = lagMonitor.dispatchSemaphore;
     dispatch_semaphore_signal(semaphore);
