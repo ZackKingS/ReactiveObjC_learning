@@ -120,6 +120,8 @@ NSString *smStackOfThread(thread_t thread) {
     int i = 0;
     NSMutableString *reStr = [NSMutableString stringWithFormat:@"Stack of thread: %u:\nCPU used: %.1f percent\nuser time: %d second\n", thread, threadInfoSt.cpuUsage, threadInfoSt.userTime];
     
+    NSLog(@"reStr: %@",reStr);
+    
     //回溯栈的算法
     /*
      栈帧布局参考：

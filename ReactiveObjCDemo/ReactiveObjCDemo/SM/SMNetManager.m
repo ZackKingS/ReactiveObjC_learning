@@ -28,13 +28,12 @@
         
         for (int i=0; i<modelArray.count; i++) {
             //创建并行队列
-           
             dispatch_group_enter(group);
              
             dispatch_async(fetchFeedQueue, ^{
                  
                 NSLog(@"begin task %d",i);
-                sleep(3);
+//                sleep(3);
                 NSLog(@"end task %d",i);
                 [subscriber sendNext:@(i)];
                 dispatch_group_leave(group);

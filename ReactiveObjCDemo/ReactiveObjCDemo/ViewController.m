@@ -18,6 +18,10 @@
 #import "SMClsCallViewController.h"
 #import "Masonry.h"
 
+#import "SMCallStack.h"
+#import "SMCallStackModel.h"
+#import "SMLagDB.h"
+#import "SMCallStack.h"
 
 @interface ViewController ()
 @property (nonatomic, strong) NSMutableArray *feeds;
@@ -49,9 +53,27 @@
     }];
     
     
+//    NSArray *list = @[@"1",@"2"];
+//    NSString *value = list[3];
+//    NSLog(@"value: %@",value);
+//
+//    NSString *stackStr = [SMCallStack callStackWithType:SMCallStackTypeMain];
+//    SMCallStackModel *model = [[SMCallStackModel alloc] init];
+//    model.stackStr = stackStr;
+//    model.isStuck = YES;
+//    [[[SMLagDB shareInstance] increaseWithStackModel:model] subscribeNext:^(id x) {
+//
+//    }];
+    
+   
+//    while (1) {
+//        
+//    }
+    
+    
 //    [self RACObserve];
     
-    [self hhhh];
+//    [self hhhh];
 }
 
 - (void)hhhh{
