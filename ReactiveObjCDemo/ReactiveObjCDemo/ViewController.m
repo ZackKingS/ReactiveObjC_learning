@@ -58,13 +58,9 @@
 //    NSLog(@"value: %@",value);
 //
   
-//    while (1) {
-//        
-//    }
     
 }
-
-  
+ 
 - (void)RACObserve{
     
     @weakify(self);

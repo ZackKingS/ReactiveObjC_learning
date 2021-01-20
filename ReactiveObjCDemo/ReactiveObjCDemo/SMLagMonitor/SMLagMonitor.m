@@ -99,7 +99,7 @@
                     if (++self.timeoutCount < 3) {
                         continue;
                     }
-//                    NSLog(@"出现结果大于三次 ！ monitor trigger ！");
+//                  NSLog(@"monitor trigger ！");
                     
                     /*
                      将【堆栈信息】上报服务器的代码放到这里
@@ -140,10 +140,35 @@
 }
 
 static void runLoopObserverCallBack(CFRunLoopObserverRef observer, CFRunLoopActivity activity, void *info){
-    SMLagMonitor *lagMonitor = (__bridge SMLagMonitor*)info;
-    lagMonitor.runLoopActivity = activity;
     
-//    NSLog(@"activity: %lu",activity);
+    //获取当前类
+    SMLagMonitor *lagMonitor = (__bridge SMLagMonitor*)info;
+    
+    //赋值当前的runLoopActivity
+    lagMonitor.runLoopActivity = activity;
+//    switch (activity) {
+//        case kCFRunLoopEntry:
+//            NSLog(@"kCFRunLoopEntry");
+//            break;
+//        case kCFRunLoopBeforeTimers:
+//            NSLog(@"kCFRunLoopBeforeTimers");
+//            break;
+//        case kCFRunLoopBeforeSources:
+//            NSLog(@"kCFRunLoopBeforeSources");
+//            break;
+//        case kCFRunLoopBeforeWaiting:
+//            NSLog(@"kCFRunLoopBeforeWaiting");
+//            break;
+//        case kCFRunLoopAfterWaiting:
+//            NSLog(@"kCFRunLoopAfterWaiting");
+//            break;
+//        case kCFRunLoopExit:
+//            NSLog(@"kCFRunLoopAfterWaiting");
+//            break;
+//        default:
+//            break;
+//    }
+    
     
     dispatch_semaphore_t semaphore = lagMonitor.dispatchSemaphore;
     dispatch_semaphore_signal(semaphore);
