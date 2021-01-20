@@ -42,14 +42,12 @@
 
 
 - (void)clsCallInsertToViewWillAppear {
-    //显示
     [SMCallTrace startWithMaxDepth:0];
 }
+
 - (void)clsCallInsertToViewWillDisappear {
-    //消失
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0), ^{
         [SMCallTrace stopSaveAndClean];
     });
-    
 }
 @end

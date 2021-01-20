@@ -57,30 +57,10 @@
 //    NSString *value = list[3];
 //    NSLog(@"value: %@",value);
 //
-//    NSString *stackStr = [SMCallStack callStackWithType:SMCallStackTypeMain];
-//    SMCallStackModel *model = [[SMCallStackModel alloc] init];
-//    model.stackStr = stackStr;
-//    model.isStuck = YES;
-//    [[[SMLagDB shareInstance] increaseWithStackModel:model] subscribeNext:^(id x) {
-//
-//    }];
-    
-   
-//    while (1) {
-//        
-//    }
-    
-    
-//    [self RACObserve];
-    
-//    [self hhhh];
+  
 }
 
-- (void)hhhh{
-    sleep(3);
-}
-
-
+  
 - (void)RACObserve{
     
     @weakify(self);
