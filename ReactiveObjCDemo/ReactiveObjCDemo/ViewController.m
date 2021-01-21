@@ -30,7 +30,8 @@
 @property (nonatomic, strong) SMLagButton *stackBt;
 @property (nonatomic, strong) SMLagButton *clsCallBt;
 @end
-
+ 
+  
 @implementation ViewController
 
 - (void)viewDidLoad {
@@ -52,14 +53,24 @@
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
     
+ 
+//    [self crashCase];
     
-//    NSArray *list = @[@"1",@"2"];
-//    NSString *value = list[3];
-//    NSLog(@"value: %@",value);
-//
-  
-    
+    [self lagCase];
+
 }
+
+-(void)lagCase{
+    while (1) {
+        
+    }
+}
+
+- (void)crashCase{
+    NSArray *arr = @[@(0),@(1)];
+    NSLog(@"%@",arr[2]);//模拟越界异常
+}
+
  
 - (void)RACObserve{
     

@@ -8,6 +8,8 @@
 #import "AppDelegate.h"
 #import "SMLagMonitor.h"
 
+#import "NdUncaughtExceptionHandler.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,6 +21,9 @@
     // Override point for customization after application launch.
     
     [[SMLagMonitor shareInstance] beginMonitor];
+        
+    [NdUncaughtExceptionHandler setDefaultHandler];
+    
     return YES;
 }
 

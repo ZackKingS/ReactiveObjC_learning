@@ -108,6 +108,7 @@
                         
                         //获取主线程 堆栈信息
                         NSString *stackStr = [SMCallStack callStackWithType: SMCallStackTypeMain];
+                        NSLog(@"stackStr: %@",stackStr);
                         SMCallStackModel *model = [[SMCallStackModel alloc] init];
                         model.stackStr = stackStr;
                         model.isStuck = YES;

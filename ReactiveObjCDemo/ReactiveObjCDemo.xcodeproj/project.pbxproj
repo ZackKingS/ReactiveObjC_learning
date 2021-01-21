@@ -32,6 +32,7 @@
 		144584AD25B6B03400FBA435 /* SMClsCallViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445849F25B6B03400FBA435 /* SMClsCallViewController.m */; };
 		144584B325B6B55100FBA435 /* DCHook.m in Sources */ = {isa = PBXBuildFile; fileRef = 144584B125B6B55100FBA435 /* DCHook.m */; };
 		144584B425B6B55100FBA435 /* UIViewController+clsCall.m in Sources */ = {isa = PBXBuildFile; fileRef = 144584B225B6B55100FBA435 /* UIViewController+clsCall.m */; };
+		1445851325B812AB00FBA435 /* NdUncaughtExceptionHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 1445851225B812AB00FBA435 /* NdUncaughtExceptionHandler.m */; };
 		F9FFDA964900E8B02050EEC2 /* Pods_ReactiveObjCDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +85,8 @@
 		144584B025B6B55100FBA435 /* DCHook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DCHook.h; sourceTree = "<group>"; };
 		144584B125B6B55100FBA435 /* DCHook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DCHook.m; sourceTree = "<group>"; };
 		144584B225B6B55100FBA435 /* UIViewController+clsCall.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+clsCall.m"; sourceTree = "<group>"; };
+		1445851125B812AB00FBA435 /* NdUncaughtExceptionHandler.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NdUncaughtExceptionHandler.h; sourceTree = "<group>"; };
+		1445851225B812AB00FBA435 /* NdUncaughtExceptionHandler.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NdUncaughtExceptionHandler.m; sourceTree = "<group>"; };
 		16EFD9B9E5AE39C8CBBD99DE /* Pods-ReactiveObjCDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.debug.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		62824E24C2AF0985653E8A73 /* Pods_ReactiveObjCDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveObjCDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D796927861769201D1AA14B3 /* Pods-ReactiveObjCDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveObjCDemo.release.xcconfig"; path = "Target Support Files/Pods-ReactiveObjCDemo/Pods-ReactiveObjCDemo.release.xcconfig"; sourceTree = "<group>"; };
@@ -126,6 +129,8 @@
 				144583F325B5A1A900FBA435 /* AppDelegate.m */,
 				144583F825B5A1A900FBA435 /* ViewController.h */,
 				144583F925B5A1A900FBA435 /* ViewController.m */,
+				1445851125B812AB00FBA435 /* NdUncaughtExceptionHandler.h */,
+				1445851225B812AB00FBA435 /* NdUncaughtExceptionHandler.m */,
 				144584B825B6B62900FBA435 /* SM */,
 				144584B625B6B55600FBA435 /* Hook */,
 				1445848325B6B03400FBA435 /* SMLagMonitor */,
@@ -340,6 +345,7 @@
 				1445846825B6860600FBA435 /* SMDB.m in Sources */,
 				144583FA25B5A1A900FBA435 /* ViewController.m in Sources */,
 				144584A325B6B03400FBA435 /* SMCPUMonitor.m in Sources */,
+				1445851325B812AB00FBA435 /* NdUncaughtExceptionHandler.m in Sources */,
 				144584A725B6B03400FBA435 /* SMStackCell.m in Sources */,
 				144584A025B6B03400FBA435 /* SMCallStackModel.m in Sources */,
 				144583F425B5A1A900FBA435 /* AppDelegate.m in Sources */,

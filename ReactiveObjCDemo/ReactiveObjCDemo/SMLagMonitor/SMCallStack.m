@@ -51,8 +51,8 @@ static mach_port_t _smMainThreadId;
         if (task_info(mach_task_self(), MACH_TASK_BASIC_INFO, (task_info_t)&taskBasicInfo, &taskInfoCount) == KERN_SUCCESS) {
             memStr = [NSString stringWithFormat:@"used %llu MB \n",taskBasicInfo.resident_size / (1024 * 1024)];
         }
-        NSLog(@"memStr: %@",memStr);
-        NSLog(@"reStr: %@",reStr);
+//        NSLog(@"memStr: %@",memStr);
+//        NSLog(@"reStr: %@",reStr);
         //释放虚存缓存，防止leak
         assert(vm_deallocate(mach_task_self(), (vm_address_t)threads, thread_count * sizeof(thread_t)) == KERN_SUCCESS);
         return [reStr copy];
@@ -94,14 +94,14 @@ static mach_port_t _smMainThreadId;
                     [nsthread setName:originName];
                     reStr = smStackOfThread(list[i]);
                     assert(vm_deallocate(mach_task_self(), (vm_address_t)list[i], 1 * sizeof(thread_t)) == KERN_SUCCESS);
-                    NSLog(@"%@",reStr);
+//                    NSLog(@"reStr: %@",reStr);
                     return [reStr copy];
                 }
             }
         }
         [nsthread setName:originName];
         reStr = smStackOfThread(mach_thread_self());
-        NSLog(@"reStr: %@",reStr);
+//        NSLog(@"reStr: %@",reStr);
         return [reStr copy];
     }
     return @"";
