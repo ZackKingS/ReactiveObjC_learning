@@ -8,7 +8,9 @@
 #import "ViewController.h"
 #import "SMDB.h"
 #import "SMNetManager.h"
+#import "XMGFileTool.h"
 
+ 
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import <UIImageView+WebCache.h>
 #import <ReactiveCocoa/RACEXTScope.h>
@@ -56,9 +58,33 @@
  
 //    [self crashCase];
     
-    [self lagCase];
+//    [self lagCase];
+    
+//    [self blockTest];
+    
+    [self testContinue];
 
 }
+
+- (void)testContinue{
+    
+    NSArray *list = @[@"1",@"2",@"3",@"4",@"5",@"6",@"7",@"8"];
+    for (NSString *num in list) {
+        if ([num isEqualToString:@"6"]) continue;
+//        if ([num isEqualToString:@"6"]) break;
+        NSLog(@"num: %@",num);
+    }
+}
+
+- (void)blockTest{
+    
+    NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
+    [XMGFileTool getFileSize:path completion:^(NSInteger size) {
+        NSLog(@"getFileSize size: %ld KB",(long)size/1024);
+    }];
+    
+}
+
 
 -(void)lagCase{
     while (1) {

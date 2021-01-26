@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		141315D925BFC86F003D1D0E /* XMGFileTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 141315D825BFC86F003D1D0E /* XMGFileTool.m */; };
 		144583F425B5A1A900FBA435 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144583F325B5A1A900FBA435 /* AppDelegate.m */; };
 		144583F725B5A1A900FBA435 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 144583F625B5A1A900FBA435 /* SceneDelegate.m */; };
 		144583FA25B5A1A900FBA435 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 144583F925B5A1A900FBA435 /* ViewController.m */; };
@@ -37,6 +38,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		141315D725BFC86F003D1D0E /* XMGFileTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGFileTool.h; sourceTree = "<group>"; };
+		141315D825BFC86F003D1D0E /* XMGFileTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = XMGFileTool.m; sourceTree = "<group>"; };
 		144583EF25B5A1A900FBA435 /* ReactiveObjCDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReactiveObjCDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		144583F225B5A1A900FBA435 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		144583F325B5A1A900FBA435 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				144583F325B5A1A900FBA435 /* AppDelegate.m */,
 				144583F825B5A1A900FBA435 /* ViewController.h */,
 				144583F925B5A1A900FBA435 /* ViewController.m */,
+				141315D725BFC86F003D1D0E /* XMGFileTool.h */,
+				141315D825BFC86F003D1D0E /* XMGFileTool.m */,
 				1445851125B812AB00FBA435 /* NdUncaughtExceptionHandler.h */,
 				1445851225B812AB00FBA435 /* NdUncaughtExceptionHandler.m */,
 				144584B825B6B62900FBA435 /* SM */,
@@ -350,6 +355,7 @@
 				144584A025B6B03400FBA435 /* SMCallStackModel.m in Sources */,
 				144583F425B5A1A900FBA435 /* AppDelegate.m in Sources */,
 				144584AC25B6B03400FBA435 /* SMCallLib.m in Sources */,
+				141315D925BFC86F003D1D0E /* XMGFileTool.m in Sources */,
 				144584AD25B6B03400FBA435 /* SMClsCallViewController.m in Sources */,
 				144584A825B6B03400FBA435 /* SMStackViewController.m in Sources */,
 				1445846F25B68ADE00FBA435 /* SMNetManager.m in Sources */,
