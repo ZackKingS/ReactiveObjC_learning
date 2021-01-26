@@ -60,7 +60,7 @@
     
 //    [self lagCase];
     
-//    [self blockTest];
+//    [self testBlockTest];
     
     [self testContinue];
 
@@ -76,7 +76,7 @@
     }
 }
 
-- (void)blockTest{
+- (void)testBlockTest{
     
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
     [XMGFileTool getFileSize:path completion:^(NSInteger size) {
