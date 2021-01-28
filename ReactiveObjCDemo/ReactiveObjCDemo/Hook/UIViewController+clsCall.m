@@ -17,14 +17,14 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        SEL fromSelectorAppear = @selector(viewWillAppear:);
-        SEL toSelectorAppear = @selector(clsCallHookViewWillAppear:);
-        [DCHook hookClass:self fromSelector:fromSelectorAppear toSelector:toSelectorAppear];
-
-        SEL fromSelectorDisappear = @selector(viewWillDisappear:);
-        SEL toSelectorDisappear = @selector(clsCallHookViewWillDisappear:);
-
-        [DCHook hookClass:self fromSelector:fromSelectorDisappear toSelector:toSelectorDisappear];
+//        SEL fromSelectorAppear = @selector(viewWillAppear:);
+//        SEL toSelectorAppear = @selector(clsCallHookViewWillAppear:);
+//        [DCHook hookClass:self fromSelector:fromSelectorAppear toSelector:toSelectorAppear];
+//
+//        SEL fromSelectorDisappear = @selector(viewWillDisappear:);
+//        SEL toSelectorDisappear = @selector(clsCallHookViewWillDisappear:);
+//
+//        [DCHook hookClass:self fromSelector:fromSelectorDisappear toSelector:toSelectorDisappear];
     });
 }
 

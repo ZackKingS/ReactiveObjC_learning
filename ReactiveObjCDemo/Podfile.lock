@@ -14,6 +14,9 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
+  - CocoaLumberjack (3.7.0):
+    - CocoaLumberjack/Core (= 3.7.0)
+  - CocoaLumberjack/Core (3.7.0)
   - DTCoreText (1.6.25):
     - DTCoreText/Core (= 1.6.25)
     - DTFoundation/Core (~> 1.7.5)
@@ -52,6 +55,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
+  - CocoaLumberjack
   - DTCoreText
   - FDFullscreenPopGesture
   - FMDB
@@ -65,6 +69,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - AFNetworking
+    - CocoaLumberjack
     - DTCoreText
     - DTFoundation
     - FDFullscreenPopGesture
@@ -78,6 +83,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  CocoaLumberjack: e8955b9d337ac307103b0a34fd141c32f27e53c5
   DTCoreText: e92f4cf6b36d9d71ce4436d12cf089d74ab0596b
   DTFoundation: e7781d9fd2f202bfd451fbbf8cab71ce83b46498
   FDFullscreenPopGesture: a8a620179e3d9c40e8e00256dcee1c1a27c6d0f0
@@ -89,6 +95,6 @@ SPEC CHECKSUMS:
   ReactiveCocoa: 81ee2fb7df2dfc6bd52b5d70473662195e20ca7d
   SDWebImage: a31ee8e90a97303529e03fb0c333eae0eacb88e9
 
-PODFILE CHECKSUM: b3bb581db0d50c709ed98c2bfbffef92a77425ce
+PODFILE CHECKSUM: 9a9674cb45b452ddc1404cf9783a9b8fd457aa31
 
 COCOAPODS: 1.9.3

@@ -31,6 +31,9 @@
 //monitor
 @property (nonatomic, strong) SMLagButton *stackBt;
 @property (nonatomic, strong) SMLagButton *clsCallBt;
+
+@property (nonatomic, assign) int age;
+
 @end
  
   
@@ -39,6 +42,24 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+//    [self addUI];
+ 
+//    [self crashCase];
+    
+//    [self lagCase];
+    
+//    [self testBlockTest];
+    
+    [self testContinue];
+
+}
+
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    self.age = 20;
+}
+
+- (void)addUI{
     
     [self.view addSubview:self.stackBt];
     [self.view addSubview:self.clsCallBt];
@@ -55,15 +76,6 @@
         make.size.mas_equalTo(CGSizeMake(40, 40));
     }];
     
- 
-//    [self crashCase];
-    
-//    [self lagCase];
-    
-//    [self testBlockTest];
-    
-    [self testContinue];
-
 }
 
 - (void)testContinue{

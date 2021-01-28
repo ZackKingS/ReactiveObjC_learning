@@ -18,4 +18,6 @@ pod 'DTCoreText'
 pod 'FMDB'
 pod 'ReactiveCocoa', '=2.3'
 pod 'FDFullscreenPopGesture'
+
+ pod 'CocoaLumberjack'
 end

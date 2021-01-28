@@ -10,6 +10,17 @@
 
 #import "NdUncaughtExceptionHandler.h"
 
+#import <CocoaLumberjack/CocoaLumberjack.h>
+
+
+#ifdef DEBUG
+static const int ddLogLevel = DDLogLevelVerbose;
+#else
+static const int ddLogLevel = DDLogLevelWarning;
+#endif
+
+ 
+
 @interface AppDelegate ()
 
 @end
@@ -20,9 +31,39 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [[SMLagMonitor shareInstance] beginMonitor];
-        
-    [NdUncaughtExceptionHandler setDefaultHandler];
+//    [[SMLagMonitor shareInstance] beginMonitor];
+//        
+//    [NdUncaughtExceptionHandler setDefaultHandler];
+//    
+    
+    //#####
+     
+    //配置DDLog
+    [DDLog addLogger:[DDTTYLogger sharedInstance]]; // TTY = Xcode console
+     
+    DDFileLogger *fileLogger = [[DDFileLogger alloc] init]; // File Logger
+    fileLogger.rollingFrequency = 60 * 60 * 24; // 24 hour rolling
+    fileLogger.logFileManager.maximumNumberOfLogFiles = 7;
+    [DDLog addLogger:fileLogger];
+ 
+
+    
+    DDLogDebug(@"####### :%d",27);
+    
+//    DDLogDebug(@"Debug");
+ 
+   
+//    sleep(3);
+//    int i = 0;
+//    while (i++<10000) {
+//
+//        DDLogDebug(@"Debug");
+//        sleep(0.1);
+//
+//    }
+    
+//    DDLogDebug(@"#######");
+    sleep(3);
     
     return YES;
 }
